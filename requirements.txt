@@ -1,0 +1,13 @@
+streamlit>=1.35
+SQLAlchemy>=2.0
+feedparser>=6.0
+requests>=2.31
+beautifulsoup4>=4.12
+pandas>=2.2
+python-dotenv>=1.0
+openai>=1.40
+biopython>=1.83
+apscheduler>=3.10
+PyYAML>=6.0
+packaging>=24.0
+deep-translator>=1.11

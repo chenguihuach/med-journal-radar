@@ -1,0 +1,48 @@
+journals:
+  - name: Nature
+    homepage_url: https://www.nature.com/nature/
+    rss_page_url: https://www.nature.com/nature/web-feeds
+    feed_urls:
+      - https://www.nature.com/nature.rss
+      - https://www.nature.com/nature/current_issue/rss/
+
+  - name: Nature Medicine
+    homepage_url: https://www.nature.com/nm/
+    rss_page_url: https://www.nature.com/nm/web-feeds
+    feed_urls:
+      - https://www.nature.com/nm/current_issue/rss/
+      - https://www.nature.com/nm/journal/vaop/ncurrent/rss.rdf
+
+  - name: The Lancet
+    homepage_url: https://www.thelancet.com/journals/lancet/home
+    rss_page_url: https://www.thelancet.com/rss
+    feed_urls:
+      - https://www.thelancet.com/rssfeed/lancet_onlineFirst
+      - https://www.thelancet.com/rssfeed/lancet_current
+
+  - name: JAMA
+    homepage_url: https://jamanetwork.com/journals/jama
+    rss_page_url: https://jamanetwork.com/journals/jama/pages/rss
+    feed_urls:
+      - https://jamanetwork.com/rss/site_3/onlineFirst_67.xml
+      - https://jamanetwork.com/rss/site_3/current.xml
+
+  - name: NEJM
+    homepage_url: https://www.nejm.org/journal/nejm
+    rss_page_url: https://www.nejm.org/about-nejm/rss
+    feed_urls:
+      - https://www.nejm.org/action/showFeed?type=etoc&feed=rss&jc=nejm
+
+  - name: The Lancet Digital Health
+    homepage_url: https://www.thelancet.com/journals/landig/home
+    rss_page_url: https://www.thelancet.com/rss
+    feed_urls:
+      - https://www.thelancet.com/rssfeed/landig_onlineFirst
+      - https://www.thelancet.com/rssfeed/landig_current
+
+  - name: npj Digital Medicine
+    homepage_url: https://www.nature.com/npjdigitalmed/
+    rss_page_url: https://www.nature.com/npjdigitalmed/web-feeds
+    feed_urls:
+      - https://www.nature.com/npjdigitalmed.rss
+      - https://www.nature.com/npjdigitalmed/current_issue/rss/

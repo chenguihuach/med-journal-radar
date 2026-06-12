@@ -1,0 +1,86 @@
+translation: |
+  请将以下医学论文标题和摘要翻译成简洁、准确、适合医学研究者阅读的中文。
+  要求：
+  1. 保留专业术语；
+  2. 保留常用英文缩写，例如 AI、ML、LLM、EHR、RCT、HR、OR、RR、AUC、C-index；
+  3. 保留所有数字、统计指标和置信区间；
+  4. 不要加入原文没有的信息；
+  5. 输出合法 JSON，不要输出 JSON 以外的解释。
+
+  输出 JSON：
+  {
+    "title_zh": "",
+    "abstract_zh": ""
+  }
+
+  输入：
+  Journal:
+  {journal}
+
+  Title:
+  {title_en}
+
+  Abstract:
+  {abstract_en}
+
+interpretation: |
+  你是一名医学文献结构化阅读助手。
+
+  请根据下面提供的文章标题、摘要、期刊、发表日期和文章类型，提取这篇医学研究的关键信息。
+
+  重要规则：
+  1. 只能根据提供的标题、摘要和 metadata 回答；
+  2. 不得推测全文中可能存在的信息；
+  3. 如果摘要没有报告样本量，写“摘要中未报告”；
+  4. 如果没有使用 AI 方法，写“未使用 AI 方法”；
+  5. 如果文章是 editorial、comment、correspondence、news、基础研究、动物实验或细胞实验，请如实标注；
+  6. 数字结果必须保留原文中的具体数值，不要自行四舍五入；
+  7. 如果原文没有报告某项信息，写“摘要中未报告”；
+  8. 输出必须是合法 JSON，不要输出 JSON 以外的解释。
+
+  重点提取：
+  - 研究纳入了多少人、多少样本、多少影像、多少中心或多少事件；
+  - 使用了什么 AI / 统计 / 机器学习方法；
+  - 研究设计是什么；
+  - 主要结果是什么；
+  - 结果是否有 AUC、HR、OR、RR、C-index、sensitivity、specificity、accuracy 等指标；
+  - 对医学 AI 或心血管临床研究有什么意义。
+
+  输出 JSON：
+  {
+    "topic_type": "医学AI | 心血管临床研究 | 二者兼有 | 低优先级或不相关",
+    "article_category": "原创研究 | 综述 | 社论 | 评论 | 通信 | 新闻 | 其他",
+    "study_design": "",
+    "population": "",
+    "sample_size": "",
+    "data_source": "",
+    "ai_or_statistical_method": "",
+    "comparator": "",
+    "primary_outcome": "",
+    "main_results": "",
+    "conclusion": "",
+    "clinical_relevance": "",
+    "limitations_from_abstract": "",
+    "evidence_snippets": {
+      "sample_size": "",
+      "method": "",
+      "main_results": ""
+    },
+    "confidence": "高 | 中 | 低"
+  }
+
+  输入：
+  Journal:
+  {journal}
+
+  Publication date:
+  {publication_date}
+
+  Article type:
+  {article_type}
+
+  Title:
+  {title_en}
+
+  Abstract:
+  {abstract_en}
